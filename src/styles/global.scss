@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+:root {
+  --white: #FFF;
+
+  --gray-50: #F7F8FA;
+  --gray-100: #E6E8EB;
+  --gray-200: #AFB2B1;
+  --gray-500: #808080;
+  --gray-800: #494D4B;
+
+  --green-500: #04D361;
+  
+  --purple-300: #9F75FF;
+  --purple-400: #9164FA; 
+  --purple-500: #8257E5;
+  --purple-800: #6F48C9;
+
+  --scrollbarBG: #b69fe7;
+  --thumbBG: #7648e2;
+}
+
+.dark {
+  --white: #292929 !important;
+  --gray-50: #212121 !important;
+  --gray-100: #313131 !important;
+  --gray-200: #adadad !important;
+  --gray-500: #dedede !important;
+  --gray-800: #ababab !important;
+}
+
+@media (max-width: 1366px){
+  html {
+    font-size: 85%;
+  }
+}
+
+@media (max-width: 1080px){
+  html {
+    font-size: 70%;
+  }
+}
+
+@media (max-width: 720px){
+  html {
+    font-size: 60%;
+  }
+}
+
+body {
+  background: var(--gray-50);
+}
+
+*::-webkit-scrollbar {
+  width: 11px;
+}
+*::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+body, input, textarea, button {
+  font: 500 1rem Inter, sans-serif;
+  color: var(--gray-500);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  font-family: Lexend, sans-serif;
+  color: var(--gray-800);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+button {
+  cursor: pointer
+}
