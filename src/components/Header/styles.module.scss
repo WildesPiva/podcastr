@@ -16,4 +16,21 @@
     margin-left: auto;
     text-transform: capitalize;
   }
+
+  button {
+    margin-left: 1rem;
+    transition: filter 0.2s;
+    background: transparent;
+    border: 0;
+    font-size: 0;
+    color: var(--gray-500);
+
+    svg {
+      font-size: 2rem;
+    }
+
+    &:active{
+      transform: scale(1.11);
+    }
+  }
 }

@@ -1,11 +1,15 @@
 import Link from 'next/link'
 import format from 'date-fns/format'
 import ptBR from 'date-fns/locale/pt-BR'
+import { BsBrightnessLow } from 'react-icons/bs'
+import { TiWeatherNight } from 'react-icons/ti'
 
+import { useGlobal } from '../../contexts/GlobalContext'
 
 import styles from './styles.module.scss'
 
 export function Header() {
+  const { isDarkTheme, handleChangeTheme } = useGlobal()
 
   const currentDate = format(new Date(), 'EEEEEE, d MMMM', {
     locale: ptBR
@@ -21,6 +25,9 @@ export function Header() {
 
       <span>{currentDate}</span>
 
+      <button onClick={handleChangeTheme}>
+        {isDarkTheme ? <TiWeatherNight /> : <BsBrightnessLow />}
+      </button>
     </header>
   )
 }
